@@ -32,6 +32,7 @@ final class CatController extends AbstractController
         $barRepo = new EntityRepository($em, new ClassMetadata("App\Entity\Bar"));
         $bar1 = $barRepo->findBy(["manager" => $_SESSION["id"]])[1];
         $aCats = $repo->findBy(["bar" => $bar1->getId()]);
+        $aBar = $barRepo->findBy(["manager" => $_SESSION["id"]]);
 
         include __DIR__ . "/../Vues/Cat/all.php";
     }
