@@ -67,9 +67,7 @@
           </nav>
           &nbsp;
           <center><div class="alert alert-danger" role="alert">
-              <i class="fas fa-cat fa-2x"></i>Don't forget to make a donation for our four-legged friends. <!--<a href="#" class="alert-link">an example link</a>-->Thanks for them.
+              <i class="fas fa-cat fa-2x"></i>Don't forget to make a donation for our four-legged friends. <!--<a href="#" class="alert-link">an example link</a>--><em>Thanks for them.</em>
                 <i class="far fa-heart fa-2x"></i></div></center>
-          
-          
-          
+           
         </header>

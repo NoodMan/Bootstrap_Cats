@@ -24,13 +24,20 @@ endif;
     }
 </style>
 <div class="container">
-    <!-- pour center le bloc-->
-    <div class="text-center"><i class="fas fa-coffee"></i>
-        SHOP : <?= $bar1->getSign(); ?>
-    </div>
 
-    <table class="table table-dark table-hover">
-       
+    &nbsp;
+    &nbsp;
+   
+    <!-- pour center le bloc-->
+    <div class="text-center"><i class="fas fa-coffee fa-2x"></i>
+        <h1>  <?= $bar1->getSign(); ?></h1>
+    </div>
+  
+    &nbsp;
+    &nbsp;
+   
+    <table class="table table-striped table-hover">
+
         <thead>
             <!-- pour mettre une barre entre -->
             <th class="p-3 mb-2 bg-secondary bg-gradient text-white" id="text-center">NAME:</th>
@@ -49,7 +56,7 @@ endif;
                 <td class="text-center">
                     <!-- popover -->
                     <class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="<?= $cat->getDescription() ?>"><?= $cat->getDescription() ?>
-                        <button class="btn btn-dark" type="button" disabled>More...</button>
+                        <button class="btn btn-secondary" type="button" disabled>More...</button>
                 </td>
             </span>
             <td type="submit" class="text-center"> <?= $cat->getChipNumber() ?> </td>
@@ -127,8 +134,8 @@ endif;
                             </div>
                         </div>
 
-                        <!-- <div class="col btn btn-info me-md-2 edit" data-id="<?= $cat->getId(); ?>" data-bs-toggle="modal"data-bs-target="#exampleModal"><i class="far fa-edit"></i> </div> -->
-                        <div class="col btn btn-danger me-md-2 delete" data-id="<?= $cat->getId(); ?>" data-name="<?= $cat->getName(); ?>">
+                        <!-- <div class="col btn btn-info bg-gradient me-md-2 edit" data-id="<?= $cat->getId(); ?>" data-bs-toggle="modal"data-bs-target="#exampleModal"><i class="far fa-edit"></i> </div> -->
+                        <div class="col btn btn-danger me-md-2 bg-gradient delete" data-id="<?= $cat->getId(); ?>" data-name="<?= $cat->getName(); ?>">
                             <i class="far fa-trash-alt"></i>
                         </div>
                     </div>
