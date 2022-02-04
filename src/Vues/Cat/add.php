@@ -20,28 +20,28 @@ include __DIR__ . "/../Heading/head.php"; ?>
             <label for="name">NAME: </label>
             <div class="input-group mb-4">
                 <span class="input-group-text border border-danger" id="basic-addon1"><i class="fas fa-cat"></i></span>
-                <input type="text" class="form-control border border-danger" placeholder="Cat's name..." aria-label="Username" aria-describedby="basic-addon1">
+                <input name="name" type="text" class="form-control border border-danger" placeholder="Cat's name..." aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
 
             <label for="description">DESCRIPTION: </label>
             <div class="input-group mb-4">
                 <span class="input-group-text border border-danger" id="basic-addon1"><i class="fas fa-pencil-alt"></i></span>
-                <input type="text" class="form-control border border-danger" placeholder="Description..." aria-label="Username" aria-describedby="basic-addon1">
+                <input name="description" type="text" class="form-control border border-danger" placeholder="Description..." aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
             <label for="description">CHIP NUMBER: </label>
             <div class="input-group mb-4">
                 <span class="input-group-text border border-danger" id="basic-addon1"><i class="fas fa-bug"></i></span>
-                <input type="text" class="form-control border border-danger" placeholder="Chip number..." aria-label="Username" aria-describedby="basic-addon1">
+                <input name="chipnumber" type="text" class="form-control border border-danger" placeholder="Chip number..." aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
             <label for="bar">SHOP: </label>
 
             <div class="input-group mb-3">
                 <label class="input-group-text border border-danger" for="inputGroupSelect01"><i class="fas fa-coffee"></i></label>
-                <select class="form-select border border-danger" id="inputGroupSelect01">
-                    <option selected>Choose your bar...</option>
+                <select name="bar" class="form-select border border-danger" id="inputGroupSelect01">
+                   
                     <?php foreach ($aBar as $bar) : ?>
                         <option value="<?= $bar->getId() ?>"><?= $bar->getSign() ?></option>
                     <?php endforeach; ?>

@@ -40,7 +40,7 @@ class Router {
             }
         }
 
-        if (!$routeFound) {
+        if (!$routeFound) { // ! regarde si $routeFound est fausse 
             return (new AppController())->error404();
         }
     }
@@ -49,4 +49,4 @@ class Router {
         header("location: ". $_SERVER["REQUEST_SCHEME"]. "://". $_SERVER["HTTP_HOST"] .  "/" . $url);
         exit();
     }
-}
+} 
