@@ -23,7 +23,7 @@ endif;
         color: black;
     }
 </style>
-<div class="container">
+<div class="container max-width=540px">
 
     &nbsp;
     &nbsp;
@@ -36,10 +36,10 @@ endif;
     &nbsp;
     &nbsp;
    
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover ">
 
-        <thead>
-            <!-- pour mettre une barre entre -->
+        <thead> <!-- pour mettre une barre entre -->
+            
             <th class="p-3 mb-2 bg-secondary bg-gradient text-white" id="text-center">NAME:</th>
             <th id="text-center" class="p-3 mb-2 bg-secondary bg-gradient text-white">DESCRIPTION:</th>
             <th class="p-3 mb-2 bg-secondary bg-gradient text-white" id="text-center">CHIP NUMBER:
@@ -63,13 +63,8 @@ endif;
             <?php if ($_SESSION["Type"] === "manager") : ?>
                 <td>
 
-                    <div class="row">
-                        <!-- le modal  -->
-                        <div class="col btn btn-info me-md-2 edit" data-id="<?= $cat->getId(); ?>" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <!-- ne fonctionne pas avec : voir memo mac "Uncaught TypeError: this._element is undefined" -->
-                            <i class="far fa-edit"></i>
-                        </div>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    
+                        <div class="modal fade" id='<?= "cat" . $cat->getId() ?>' tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header" class="text-center">
@@ -134,7 +129,7 @@ endif;
                             </div>
                         </div>
 
-                        <!-- <div class="col btn btn-info bg-gradient me-md-2 edit" data-id="<?= $cat->getId(); ?>" data-bs-toggle="modal"data-bs-target="#exampleModal"><i class="far fa-edit"></i> </div> -->
+                        <div class="col btn btn-info bg-gradient me-md-2 edit" data-id="<?= $cat->getId(); ?>" data-bs-toggle="modal" data-bs-target='<?= "#cat" . $cat->getId() ?>'><i class="far fa-edit"></i> </div>
                         <div class="col btn btn-danger me-md-2 bg-gradient delete" data-id="<?= $cat->getId(); ?>" data-name="<?= $cat->getName(); ?>">
                             <i class="far fa-trash-alt"></i>
                         </div>
