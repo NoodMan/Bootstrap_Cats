@@ -1,6 +1,7 @@
 <?php
 include __DIR__ . "/../heading/head.php"; ?>
 <div>
+
     <?php
     if (isset($error)) {
         echo $error;
@@ -8,6 +9,7 @@ include __DIR__ . "/../heading/head.php"; ?>
     }
     ?>
 </div>
+
 <form action='<?="/cat/$id"?>' method="POST" id="form_controller">
 
     <label for="name">NOM: </label>

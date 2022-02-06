@@ -31,7 +31,7 @@ final class CatController extends AbstractController
         $em = EntityManagerHelper::getEntityManager();
         $repo = new EntityRepository($em, new ClassMetadata("App\Entity\Cat"));
         $barRepo = new EntityRepository($em, new ClassMetadata("App\Entity\Bar"));
-        $bar1 = $barRepo->findBy(["manager" => $_SESSION["id"]])[1];
+        $bar1 = $barRepo->findBy(["manager" => $_SESSION["id"]])[1]; // à reprendre pour faire le tableau pour le bar deux
         $aCats = $repo->findBy(["bar" => $bar1->getId()]);
         $aBar = $barRepo->findBy(["manager" => $_SESSION["id"]]);
 

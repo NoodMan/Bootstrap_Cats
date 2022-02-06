@@ -1,5 +1,6 @@
 <?php
-include __DIR__ . "/../Heading/head.php"; ?>
+include __DIR__ . "/../heading/head.php"; ?>
+
 <div class="error">
     <?php
     if (isset($error)) {
@@ -59,7 +60,7 @@ include __DIR__ . "/../Heading/head.php"; ?>
 
 
 <?php
-include __DIR__ . "/../Heading/footer.php"; ?>
+include __DIR__ . "/../heading/footer.php"; ?>
 
 <script>
     $(".error").remove().fadeOut(3000)

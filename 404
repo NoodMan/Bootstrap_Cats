@@ -159,7 +159,7 @@
  <h1 class="second-four">4</h1>
   <p class="wrong-para">Uh Oh! Page not found!</p>
 </div>
-<script>
+<!-- <script>
   let t1 = gsap.timeline();
 let t2 = gsap.timeline();
 let t3 = gsap.timeline();
@@ -194,5 +194,5 @@ t3.fromTo(".wrong-para",
     yoyo:true
   }
 });
-</script>
+</script> -->
 </html>

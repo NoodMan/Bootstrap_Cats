@@ -1,41 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include __DIR__ . "/../heading/head.php"; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
-    <style>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> -->
 
-        #form_controller {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-            flex: 1 auto;
-        }
+<style>
+    #form_controller {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex: 1 auto;
+    }
     </style>
-</head>
 
-<body>
-    <div>
-        <?php 
-            if (isset($error)) {
-               echo $error;
-               unset($error);
-            }
+
+<div class="container">
+
+    <div class="error">
+        <?php
+        if (isset($error)) {
+            echo $error;
+            unset($error);
+        }
         ?>
     </div>
-    <form action="/" method="POST" id="form_controller">
-        <label for="login">Email: </label>
-        <input type="text" name="login" id="login">
-        <label for="password">Mot de passe: </label>
-        <input type="password" name="password" id="password">
 
-        <input type="submit" value="Se connecter">
-    </form>
-</body>
+    <div class="d-flex flex-column align-items-center">
 
-</html>
+        <form action="/" method="POST" id="form_controller">
+
+            <label for="login">Mail: </label>
+            <div class="input-group mb-4">
+                <span class="input-group-text border border-danger" id="basic-addon1"><i class="fas fa-at fa-2x"></i></span>
+                <input id="login" name="login" type="text" class="form-control border border-danger" placeholder="Mail..." aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+            <label for="password">Password </label>
+            <div class="input-group mb-4">
+                <span class="input-group-text border border-danger" id="basic-addon1"><i class="fas fa-key fa-2x"></i></span>
+                <input id="password" name="password" type="text" class="form-control border border-danger" placeholder="Password..." aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+            <button class="btn btn-outline-dark border border-danger" type="submit">CONNECTION...</button>
+
+
+        </form>
+    </div>
+</div>
+
+
+<?php
+include __DIR__ . "/../heading/footer.php"; ?>
+
+<script>
+    $(".error").remove().fadeOut(3000)
+</script>
